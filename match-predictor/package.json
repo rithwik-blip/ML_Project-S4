@@ -1,0 +1,10 @@
+{
+  "name": "match-predictor",
+  "version": "1.0.0",
+  "description": "OmniMatch AI - Match Outcome Predictor Web App",
+  "main": "run.js",
+  "scripts": {
+    "dev": "node run.js",
+    "start": "node run.js"
+  }
+}

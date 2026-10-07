@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniMatch AI — Sports Outcome Prediction & Analytics</title>
+  <meta name="description" content="Machine learning powered match outcome predictor for Premier League Football and Indian Premier League Cricket using Random Forest and Deep Learning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow layers -->
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="bg-glow glow-3"></div>
+
+  <!-- Header / Navigation -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+            <path d="M2 12h20"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">OmniMatch <span class="gradient-text">AI</span></span>
+          <span class="brand-sub">ML Sports Intelligence Engine</span>
+        </div>
+      </div>
+
+      <nav class="nav-tabs" role="tablist">
+        <button class="nav-tab active" id="tab-btn-football" data-tab="football" role="tab" aria-selected="true">
+          <span class="tab-emoji">⚽</span> Premier League
+        </button>
+        <button class="nav-tab" id="tab-btn-cricket" data-tab="cricket" role="tab" aria-selected="false">
+          <span class="tab-emoji">🏏</span> IPL Cricket
+        </button>
+        <button class="nav-tab" id="tab-btn-analytics" data-tab="analytics" role="tab" aria-selected="false">
+          <span class="tab-emoji">📊</span> Analytics & Trends
+        </button>
+        <button class="nav-tab" id="tab-btn-metrics" data-tab="metrics" role="tab" aria-selected="false">
+          <span class="tab-emoji">🧠</span> ML Benchmarks
+        </button>
+        <button class="nav-tab" id="tab-btn-history" data-tab="history" role="tab" aria-selected="false">
+          <span class="tab-emoji">🕒</span> History <span class="badge" id="history-badge">0</span>
+        </button>
+      </nav>
+
+      <div class="header-actions">
+        <div class="system-status">
+          <div class="status-indicator online" id="api-status-dot"></div>
+          <span class="status-text" id="api-status-text">Connecting to API...</span>
+        </div>
+        <button class="theme-toggle-btn" id="theme-toggle-btn" type="button" title="Toggle Light / Dark Mode" aria-label="Toggle Light / Dark Mode">
+          <span class="theme-icon-moon">🌙</span>
+          <span class="theme-icon-sun">☀️</span>
+          <span class="theme-name" id="theme-text">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-content">
+    
+    <!-- Hero Banner -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="pulse-ring"></span>
+          <span>Dual-Sport Machine Learning Pipeline</span>
+        </div>
+        <h1 class="hero-title">Predict Match Outcomes with <span class="gradient-text">Probabilistic AI</span></h1>
+        <p class="hero-desc">
+          Trained on over 260,000 IPL deliveries and complete English Premier League match records using ensemble Random Forest and Deep Neural Architecture.
+        </p>
+      </div>
+
+      <!-- Quick KPI Counters -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-value" id="kpi-cricket-balls">260,920</div>
+          <div class="kpi-label">IPL Deliveries Trained</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" id="kpi-football-matches">380</div>
+          <div class="kpi-label">EPL Matches Analyzed</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" id="kpi-rf-acc">73.7%</div>
+          <div class="kpi-label">Football Model Accuracy</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" id="kpi-cricket-acc">63.5%</div>
+          <div class="kpi-label">Cricket Model Accuracy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 1: FOOTBALL PREDICTOR -->
+    <section class="tab-panel active" id="panel-football" role="tabpanel">
+      <div class="grid-2-col">
+        
+        <!-- Selection & Controls Card -->
+        <div class="glass-card match-builder">
+          <div class="card-header">
+            <div class="header-icon football-theme">⚽</div>
+            <div>
+              <h2 class="card-title">Fixture Simulator</h2>
+              <p class="card-subtitle">Configure English Premier League matchup & market odds</p>
+            </div>
+          </div>
+
+          <form id="football-form" class="predictor-form">
+            <!-- Home vs Away Picker -->
+            <div class="matchup-selector">
+              <!-- Home Team -->
+              <div class="team-picker">
+                <label for="fb-home-select" class="picker-label">Home Team</label>
+                <div class="select-wrapper">
+                  <select id="fb-home-select" class="custom-select" required>
+                    <option value="" disabled selected>Select Home Club</option>
+                  </select>
+                </div>
+                <div class="team-stat-preview" id="fb-home-preview">
+                  <div class="stat-pill"><span class="pill-k">Shots:</span> <strong id="fb-home-shots">-</strong></div>
+                  <div class="stat-pill"><span class="pill-k">On Target:</span> <strong id="fb-home-sot">-</strong></div>
+                  <div class="stat-pill"><span class="pill-k">Corners:</span> <strong id="fb-home-corners">-</strong></div>
+                </div>
+              </div>
+
+              <!-- VS Badge -->
+              <div class="clash-badge">
+                <span>VS</span>
+              </div>
+
+              <!-- Away Team -->
+              <div class="team-picker">
+                <label for="fb-away-select" class="picker-label">Away Team</label>
+                <div class="select-wrapper">
+                  <select id="fb-away-select" class="custom-select" required>
+                    <option value="" disabled selected>Select Away Club</option>
+                  </select>
+                </div>
+                <div class="team-stat-preview" id="fb-away-preview">
+                  <div class="stat-pill"><span class="pill-k">Shots:</span> <strong id="fb-away-shots">-</strong></div>
+                  <div class="stat-pill"><span class="pill-k">On Target:</span> <strong id="fb-away-sot">-</strong></div>
+                  <div class="stat-pill"><span class="pill-k">Corners:</span> <strong id="fb-away-corners">-</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prediction Mode Toggle Switch -->
+            <div class="mode-toggle-card">
+              <div class="toggle-switch-row">
+                <div class="toggle-text-group">
+                  <span class="toggle-title">Custom Market Odds</span>
+                  <span class="toggle-status-label" id="odds-toggle-status">Mode: Auto Stats (Default)</span>
+                </div>
+                <label class="toggle-switch" for="odds-toggle-checkbox">
+                  <input type="checkbox" id="odds-toggle-checkbox" role="switch" aria-checked="false">
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+
+              <!-- Collapsible Custom Odds Drawer -->
+              <div class="custom-odds-drawer hidden" id="custom-odds-drawer">
+                <div class="drawer-header">
+                  <span class="drawer-label">Manual Odds Inputs</span>
+                  <button type="button" class="btn-text" id="fb-reset-odds">Reset to Historical Avg</button>
+                </div>
+                <div class="odds-inputs-grid">
+                  <div class="input-group">
+                    <label for="fb-odd-h">Home Win</label>
+                    <input type="number" step="0.05" min="1.01" max="50.0" id="fb-odd-h" value="2.20" class="custom-input">
+                  </div>
+                  <div class="input-group">
+                    <label for="fb-odd-d">Draw</label>
+                    <input type="number" step="0.05" min="1.01" max="50.0" id="fb-odd-d" value="3.50" class="custom-input">
+                  </div>
+                  <div class="input-group">
+                    <label for="fb-odd-a">Away Win</label>
+                    <input type="number" step="0.05" min="1.01" max="50.0" id="fb-odd-a" value="3.80" class="custom-input">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Predict Button -->
+            <button type="submit" class="btn-primary" id="btn-predict-football">
+              <span class="btn-text-content">Calculate Prediction</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Result & Forecast Card -->
+        <div class="glass-card result-container" id="fb-result-card">
+          <div class="empty-state" id="fb-empty-state">
+            <div class="empty-icon">⚽</div>
+            <h3>Awaiting Match Configuration</h3>
+            <p>Select both Premier League teams and click "Calculate Prediction" to analyze odds, attacking threat, and win probabilities.</p>
+          </div>
+
+          <div class="result-display hidden" id="fb-result-content">
+            <div class="outcome-header">
+              <span class="forecast-badge" id="fb-forecast-tag">PREDICTED OUTCOME</span>
+              <h2 class="outcome-headline" id="fb-outcome-text">Home Win</h2>
+              <p class="outcome-subtitle" id="fb-outcome-sub">Arsenal vs Chelsea</p>
+            </div>
+
+            <!-- 3-Way Probability Bar -->
+            <div class="prob-section">
+              <div class="prob-labels">
+                <span id="prob-h-label">Home Win: <strong>55%</strong></span>
+                <span id="prob-d-label">Draw: <strong>25%</strong></span>
+                <span id="prob-a-label">Away Win: <strong>20%</strong></span>
+              </div>
+              <div class="stacked-bar">
+                <div class="bar-slice bar-home" id="bar-home" style="width: 55%;"></div>
+                <div class="bar-slice bar-draw" id="bar-draw" style="width: 25%;"></div>
+                <div class="bar-slice bar-away" id="bar-away" style="width: 20%;"></div>
+              </div>
+            </div>
+
+            <!-- Model Details Grid -->
+            <div class="model-breakdown-grid">
+              <div class="mini-card">
+                <span class="mini-title">Random Forest</span>
+                <div class="mini-value text-accent" id="fb-rf-pick">Home Win</div>
+                <span class="mini-note" id="fb-rf-conf">Confidence: 61.2%</span>
+              </div>
+              <div class="mini-card">
+                <span class="mini-title">Deep Learning (ANN)</span>
+                <div class="mini-value" id="fb-ann-pick">Home Win</div>
+                <span class="mini-note" id="fb-ann-conf">Confidence: 58.4%</span>
+              </div>
+            </div>
+
+            <!-- Feature Snapshot -->
+            <div class="feature-snapshot">
+              <h4 class="snapshot-title">Engine Features Analyzed</h4>
+              <div class="snapshot-chips" id="fb-feature-chips">
+                <!-- Chips injected dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 2: CRICKET PREDICTOR -->
+    <section class="tab-panel" id="panel-cricket" role="tabpanel">
+      <div class="grid-2-col">
+        
+        <!-- Cricket Selection Card -->
+        <div class="glass-card match-builder">
+          <div class="card-header">
+            <div class="header-icon cricket-theme">🏏</div>
+            <div>
+              <h2 class="card-title">IPL Clash Simulator</h2>
+              <p class="card-subtitle">Innings-aware prediction based on ball-by-ball IPL dataset</p>
+            </div>
+          </div>
+
+          <form id="cricket-form" class="predictor-form">
+            <!-- Innings Selector -->
+            <div class="matchup-selector">
+              <!-- Team 1: Batting First -->
+              <div class="team-picker">
+                <div class="picker-top">
+                  <label for="ck-team1-select" class="picker-label">Batting 1st (Innings 1)</label>
+                  <span class="innings-badge">Setting Target</span>
+                </div>
+                <div class="select-wrapper">
+                  <select id="ck-team1-select" class="custom-select" required>
+                    <option value="" disabled selected>Select 1st Batting Team</option>
+                  </select>
+                </div>
+                <div class="year-select-wrapper">
+                  <label for="ck-team1-year" class="year-select-label">📅 Season Year</label>
+                  <div class="select-wrapper">
+                    <select id="ck-team1-year" class="custom-select year-select" disabled>
+                      <option value="" disabled selected>Select team first</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="team-stat-preview" id="ck-team1-preview">
+                  <div class="stat-pill"><span class="pill-k">Avg 1st Score:</span> <strong id="ck-t1-runs">-</strong></div>
+                  <div class="stat-pill"><span class="pill-k">Run Rate:</span> <strong id="ck-t1-rr">-</strong></div>
+                  <div class="stat-pill"><span class="pill-k">Avg 6s:</span> <strong id="ck-t1-sixes">-</strong></div>
+                </div>
+              </div>
+
+              <!-- Swap Button -->
+              <div class="swap-wrapper">
+                <button type="button" class="btn-swap" id="ck-swap-teams" title="Swap Batting / Chasing">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16"></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Team 2: Chasing -->
+              <div class="team-picker">
+                <div class="picker-top">
+                  <label for="ck-team2-select" class="picker-label">Batting 2nd (Innings 2)</label>
+                  <span class="innings-badge chase">Chasing</span>
+                </div>
+                <div class="select-wrapper">
+                  <select id="ck-team2-select" class="custom-select" required>
+                    <option value="" disabled selected>Select Chasing Team</option>
+                  </select>
+                </div>
+                <div class="year-select-wrapper">
+                  <label for="ck-team2-year" class="year-select-label">📅 Season Year</label>
+                  <div class="select-wrapper">
+                    <select id="ck-team2-year" class="custom-select year-select" disabled>
+                      <option value="" disabled selected>Select team first</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="team-stat-preview" id="ck-team2-preview">
+                  <div class="stat-pill"><span class="pill-k">Overall Win %:</span> <strong id="ck-t2-winrate">-</strong></div>
+                  <div class="stat-pill"><span class="pill-k">Chase Win %:</span> <strong id="ck-t2-chasewin">-</strong></div>
+                  <div class="stat-pill"><span class="pill-k">Avg Extras Given:</span> <strong id="ck-t2-extras">-</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Predict Button -->
+            <button type="submit" class="btn-primary cricket-btn" id="btn-predict-cricket">
+              <span class="btn-text-content">Simulate IPL Match</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Cricket Result Card -->
+        <div class="glass-card result-container" id="ck-result-card">
+          <div class="empty-state" id="ck-empty-state">
+            <div class="empty-icon">🏏</div>
+            <h3>Select IPL Franchises</h3>
+            <p>Pick the team batting first and the chasing opponent to simulate win likelihood using historical ball-by-ball patterns.</p>
+          </div>
+
+          <div class="result-display hidden" id="ck-result-content">
+            <div class="outcome-header">
+              <span class="forecast-badge cricket-badge" id="ck-forecast-tag">MATCH PREDICTION</span>
+              <h2 class="outcome-headline" id="ck-outcome-text">Chennai Super Kings</h2>
+              <p class="outcome-subtitle" id="ck-outcome-sub">Predicted Winner</p>
+            </div>
+
+            <!-- Two-Team Probability Bar -->
+            <div class="cricket-duel-section">
+              <div class="duel-labels">
+                <div class="duel-team left" id="duel-team1-box">
+                  <span class="duel-name" id="duel-t1-name">Team 1</span>
+                  <span class="duel-pct" id="duel-t1-pct">54.2%</span>
+                </div>
+                <div class="duel-team right" id="duel-team2-box">
+                  <span class="duel-name" id="duel-t2-name">Team 2</span>
+                  <span class="duel-pct" id="duel-t2-pct">45.8%</span>
+                </div>
+              </div>
+
+              <div class="duel-bar-track">
+                <div class="duel-bar-fill" id="duel-bar-fill" style="width: 54.2%;"></div>
+              </div>
+            </div>
+
+            <!-- Tactical Insights -->
+            <div class="cricket-factors-grid">
+              <div class="factor-card">
+                <span class="factor-label">Projected 1st Innings Par</span>
+                <span class="factor-val" id="ck-proj-score">165 - 178</span>
+              </div>
+              <div class="factor-card">
+                <span class="factor-label">Target Defense Index</span>
+                <span class="factor-val" id="ck-defend-idx">High</span>
+              </div>
+              <div class="factor-card">
+                <span class="factor-label">Run Rate Requirement</span>
+                <span class="factor-val" id="ck-req-rr">8.6 RPO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 3: ANALYTICS & TRENDS -->
+    <section class="tab-panel" id="panel-analytics" role="tabpanel">
+      <div class="analytics-layout">
+        
+        <!-- IPL Over by Over Trajectory -->
+        <div class="glass-card full-width">
+          <div class="card-header">
+            <div class="header-icon">📈</div>
+            <div>
+              <h3 class="card-title">IPL Run Rate Acceleration Curve (Overs 1 - 20)</h3>
+              <p class="card-subtitle">Aggregated average runs scored across 260,000 deliveries spanning Powerplay, Middle, and Death Overs</p>
+            </div>
+          </div>
+
+          <div class="overs-chart-container" id="overs-chart">
+            <!-- Dynamically rendered bar trajectory -->
+          </div>
+        </div>
+
+        <!-- Top Batters and Top Bowlers Side by Side -->
+        <div class="grid-2-col">
+          <div class="glass-card">
+            <div class="card-header">
+              <div class="header-icon">⚡</div>
+              <div>
+                <h3 class="card-title">IPL Top Run Scorers</h3>
+                <p class="card-subtitle">Leading run getters from the tournament dataset</p>
+              </div>
+            </div>
+            <div class="table-container">
+              <table class="data-table" id="table-batters">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Batter</th>
+                    <th class="text-right">Total Runs</th>
+                  </tr>
+                </thead>
+                <tbody id="batters-tbody">
+                  <!-- Injected via app.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <div class="card-header">
+              <div class="header-icon">🎯</div>
+              <div>
+                <h3 class="card-title">IPL Top Wicket Takers</h3>
+                <p class="card-subtitle">Most prolific bowlers in the delivery dataset</p>
+              </div>
+            </div>
+            <div class="table-container">
+              <table class="data-table" id="table-bowlers">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Bowler</th>
+                    <th class="text-right">Total Wickets</th>
+                  </tr>
+                </thead>
+                <tbody id="bowlers-tbody">
+                  <!-- Injected via app.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Football Outcome Distribution Card -->
+        <div class="glass-card full-width">
+          <div class="card-header">
+            <div class="header-icon">📊</div>
+            <div>
+              <h3 class="card-title">Premier League Match Outcome Breakdown</h3>
+              <p class="card-subtitle">Distribution of results showing home advantage in top flight football</p>
+            </div>
+          </div>
+          <div class="outcome-dist-grid" id="fb-dist-cards">
+            <!-- Injected via app.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 4: MODEL BENCHMARKS -->
+    <section class="tab-panel" id="panel-metrics" role="tabpanel">
+      <div class="metrics-layout">
+        
+        <!-- Football Performance Card -->
+        <div class="glass-card">
+          <div class="card-header">
+            <div class="header-icon football-theme">⚽</div>
+            <div>
+              <h3 class="card-title">Football Prediction Models</h3>
+              <p class="card-subtitle">Evaluation on 20% unseen test partition (76 matches)</p>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="m-val" id="fb-m-acc">73.68%</span>
+              <span class="m-lbl">Accuracy</span>
+            </div>
+            <div class="metric-box">
+              <span class="m-val" id="fb-m-prec">72.41%</span>
+              <span class="m-lbl">Precision</span>
+            </div>
+            <div class="metric-box">
+              <span class="m-val" id="fb-m-rec">73.68%</span>
+              <span class="m-lbl">Recall</span>
+            </div>
+            <div class="metric-box">
+              <span class="m-val" id="fb-m-f1">72.63%</span>
+              <span class="m-lbl">F1-Score</span>
+            </div>
+          </div>
+
+          <div class="feature-importance-box">
+            <h4 class="fi-title">Top Influential Features (Random Forest)</h4>
+            <div class="fi-list" id="fb-fi-list">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Cricket Performance Card -->
+        <div class="glass-card">
+          <div class="card-header">
+            <div class="header-icon cricket-theme">🏏</div>
+            <div>
+              <h3 class="card-title">Cricket Prediction Models</h3>
+              <p class="card-subtitle">Evaluation on 20% unseen match set (219 IPL matches)</p>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="m-val" id="ck-m-acc">63.47%</span>
+              <span class="m-lbl">Accuracy</span>
+            </div>
+            <div class="metric-box">
+              <span class="m-val" id="ck-m-prec">63.60%</span>
+              <span class="m-lbl">Precision</span>
+            </div>
+            <div class="metric-box">
+              <span class="m-val" id="ck-m-rec">63.47%</span>
+              <span class="m-lbl">Recall</span>
+            </div>
+            <div class="metric-box">
+              <span class="m-val" id="ck-m-f1">63.42%</span>
+              <span class="m-lbl">F1-Score</span>
+            </div>
+          </div>
+
+          <div class="feature-importance-box">
+            <h4 class="fi-title">Top Influential Features (Random Forest)</h4>
+            <div class="fi-list" id="ck-fi-list">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 5: HISTORY -->
+    <section class="tab-panel" id="panel-history" role="tabpanel">
+      <div class="glass-card">
+        <div class="card-header flex-between">
+          <div class="flex-align">
+            <div class="header-icon">🕒</div>
+            <div>
+              <h3 class="card-title">Prediction History</h3>
+              <p class="card-subtitle">Record of simulated outcomes and probability spreads in this session</p>
+            </div>
+          </div>
+          <button type="button" class="btn-secondary" id="btn-clear-history">Clear History</button>
+        </div>
+
+        <div class="history-list" id="history-container">
+          <div class="empty-state">
+            <p>No predictions made yet. Run a Football or Cricket simulation to log results here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <p>OmniMatch AI — Machine Learning for Match Outcome Prediction &copy; 2026</p>
+      <p class="footer-meta">Powered by FastAPI, Scikit-Learn, Random Forest & Pandas</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1456 @@
+{
+  "football": {
+    "features": [
+      "HS",
+      "AS",
+      "HST",
+      "AST",
+      "HF",
+      "AF",
+      "HC",
+      "AC",
+      "HY",
+      "AY",
+      "HR",
+      "AR",
+      "B365H",
+      "B365D",
+      "B365A"
+    ],
+    "classes": [
+      "A",
+      "D",
+      "H"
+    ],
+    "teams": [
+      "Arsenal",
+      "Bournemouth",
+      "Brighton",
+      "Burnley",
+      "Cardiff",
+      "Chelsea",
+      "Crystal Palace",
+      "Everton",
+      "Fulham",
+      "Huddersfield",
+      "Leicester",
+      "Liverpool",
+      "Man City",
+      "Man United",
+      "Newcastle",
+      "Southampton",
+      "Tottenham",
+      "Watford",
+      "West Ham",
+      "Wolves"
+    ],
+    "team_stats": {
+      "Arsenal": {
+        "HS": 13.473684210526315,
+        "HST": 5.052631578947368,
+        "HF": 11.473684210526315,
+        "HC": 6.7368421052631575,
+        "HY": 2.1052631578947367,
+        "HR": 0.0,
+        "AS": 11.052631578947368,
+        "AST": 3.8947368421052633,
+        "AF": 10.210526315789474,
+        "AC": 4.421052631578948,
+        "AY": 1.6842105263157894,
+        "AR": 0.10526315789473684
+      },
+      "Bournemouth": {
+        "HS": 12.052631578947368,
+        "HST": 4.315789473684211,
+        "HF": 9.842105263157896,
+        "HC": 5.052631578947368,
+        "HY": 1.894736842105263,
+        "HR": 0.05263157894736842,
+        "AS": 11.473684210526315,
+        "AST": 4.2631578947368425,
+        "AF": 8.0,
+        "AC": 5.0,
+        "AY": 1.263157894736842,
+        "AR": 0.0
+      },
+      "Brighton": {
+        "HS": 10.526315789473685,
+        "HST": 2.789473684210526,
+        "HF": 11.631578947368421,
+        "HC": 4.7368421052631575,
+        "HY": 1.5789473684210527,
+        "HR": 0.10526315789473684,
+        "AS": 8.68421052631579,
+        "AST": 2.8947368421052633,
+        "AF": 12.736842105263158,
+        "AC": 3.473684210526316,
+        "AY": 1.5789473684210527,
+        "AR": 0.10526315789473684
+      },
+      "Burnley": {
+        "HS": 11.052631578947368,
+        "HST": 3.473684210526316,
+        "HF": 9.68421052631579,
+        "HC": 4.2105263157894735,
+        "HY": 1.736842105263158,
+        "HR": 0.0,
+        "AS": 7.842105263157895,
+        "AST": 2.5789473684210527,
+        "AF": 9.210526315789474,
+        "AC": 3.1578947368421053,
+        "AY": 2.210526315789474,
+        "AR": 0.05263157894736842
+      },
+      "Cardiff": {
+        "HS": 12.105263157894736,
+        "HST": 3.5789473684210527,
+        "HF": 10.263157894736842,
+        "HC": 5.0,
+        "HY": 1.736842105263158,
+        "HR": 0.0,
+        "AS": 9.842105263157896,
+        "AST": 3.0526315789473686,
+        "AF": 9.947368421052632,
+        "AC": 3.8421052631578947,
+        "AY": 1.6842105263157894,
+        "AR": 0.05263157894736842
+      },
+      "Chelsea": {
+        "HS": 17.105263157894736,
+        "HST": 6.2105263157894735,
+        "HF": 8.105263157894736,
+        "HC": 6.315789473684211,
+        "HY": 1.0526315789473684,
+        "HR": 0.0,
+        "AS": 14.789473684210526,
+        "AST": 4.2105263157894735,
+        "AF": 9.736842105263158,
+        "AC": 5.0,
+        "AY": 1.5263157894736843,
+        "AR": 0.0
+      },
+      "Crystal Palace": {
+        "HS": 15.473684210526315,
+        "HST": 4.0,
+        "HF": 9.473684210526315,
+        "HC": 6.842105263157895,
+        "HY": 1.3157894736842106,
+        "HR": 0.05263157894736842,
+        "AS": 10.368421052631579,
+        "AST": 3.6842105263157894,
+        "AF": 10.842105263157896,
+        "AC": 3.9473684210526314,
+        "AY": 1.736842105263158,
+        "AR": 0.05263157894736842
+      },
+      "Everton": {
+        "HS": 14.68421052631579,
+        "HST": 4.473684210526316,
+        "HF": 11.473684210526315,
+        "HC": 6.2631578947368425,
+        "HY": 1.263157894736842,
+        "HR": 0.0,
+        "AS": 11.368421052631579,
+        "AST": 4.421052631578948,
+        "AF": 11.263157894736842,
+        "AC": 5.052631578947368,
+        "AY": 1.631578947368421,
+        "AR": 0.21052631578947367
+      },
+      "Fulham": {
+        "HS": 14.421052631578947,
+        "HST": 4.526315789473684,
+        "HF": 10.473684210526315,
+        "HC": 5.368421052631579,
+        "HY": 1.7894736842105263,
+        "HR": 0.05263157894736842,
+        "AS": 9.421052631578947,
+        "AST": 3.3157894736842106,
+        "AF": 11.789473684210526,
+        "AC": 3.1052631578947367,
+        "AY": 1.7894736842105263,
+        "AR": 0.05263157894736842
+      },
+      "Huddersfield": {
+        "HS": 10.68421052631579,
+        "HST": 3.0,
+        "HF": 11.263157894736842,
+        "HC": 4.473684210526316,
+        "HY": 1.4210526315789473,
+        "HR": 0.15789473684210525,
+        "AS": 10.368421052631579,
+        "AST": 3.210526315789474,
+        "AF": 10.842105263157896,
+        "AC": 4.052631578947368,
+        "AY": 1.4736842105263157,
+        "AR": 0.05263157894736842
+      },
+      "Leicester": {
+        "HS": 15.68421052631579,
+        "HST": 5.2105263157894735,
+        "HF": 9.68421052631579,
+        "HC": 5.684210526315789,
+        "HY": 1.736842105263158,
+        "HR": 0.10526315789473684,
+        "AS": 11.421052631578947,
+        "AST": 4.473684210526316,
+        "AF": 8.789473684210526,
+        "AC": 5.368421052631579,
+        "AY": 1.263157894736842,
+        "AR": 0.15789473684210525
+      },
+      "Liverpool": {
+        "HS": 17.63157894736842,
+        "HST": 6.631578947368421,
+        "HF": 7.842105263157895,
+        "HC": 7.0,
+        "HY": 0.6842105263157895,
+        "HR": 0.05263157894736842,
+        "AS": 12.578947368421053,
+        "AST": 5.2631578947368425,
+        "AF": 8.736842105263158,
+        "AC": 6.105263157894737,
+        "AY": 1.263157894736842,
+        "AR": 0.05263157894736842
+      },
+      "Man City": {
+        "HS": 20.31578947368421,
+        "HST": 7.7894736842105265,
+        "HF": 8.526315789473685,
+        "HC": 7.526315789473684,
+        "HY": 0.8947368421052632,
+        "HR": 0.0,
+        "AS": 15.631578947368421,
+        "AST": 5.894736842105263,
+        "AF": 8.736842105263158,
+        "AC": 7.578947368421052,
+        "AY": 1.4210526315789473,
+        "AR": 0.05263157894736842
+      },
+      "Man United": {
+        "HS": 14.947368421052632,
+        "HST": 6.631578947368421,
+        "HF": 11.210526315789474,
+        "HC": 6.105263157894737,
+        "HY": 1.6842105263157894,
+        "HR": 0.05263157894736842,
+        "AS": 12.736842105263158,
+        "AST": 5.2105263157894735,
+        "AF": 11.578947368421053,
+        "AC": 4.421052631578948,
+        "AY": 2.1578947368421053,
+        "AR": 0.15789473684210525
+      },
+      "Newcastle": {
+        "HS": 14.0,
+        "HST": 4.2105263157894735,
+        "HF": 10.68421052631579,
+        "HC": 5.894736842105263,
+        "HY": 1.3157894736842106,
+        "HR": 0.05263157894736842,
+        "AS": 9.368421052631579,
+        "AST": 3.263157894736842,
+        "AF": 11.526315789473685,
+        "AC": 3.6315789473684212,
+        "AY": 1.6842105263157894,
+        "AR": 0.05263157894736842
+      },
+      "Southampton": {
+        "HS": 13.578947368421053,
+        "HST": 4.684210526315789,
+        "HF": 11.526315789473685,
+        "HC": 5.315789473684211,
+        "HY": 2.0526315789473686,
+        "HR": 0.10526315789473684,
+        "AS": 11.68421052631579,
+        "AST": 3.8421052631578947,
+        "AF": 10.578947368421053,
+        "AC": 4.842105263157895,
+        "AY": 1.6842105263157894,
+        "AR": 0.05263157894736842
+      },
+      "Tottenham": {
+        "HS": 16.210526315789473,
+        "HST": 5.526315789473684,
+        "HF": 9.157894736842104,
+        "HC": 5.368421052631579,
+        "HY": 1.0526315789473684,
+        "HR": 0.0,
+        "AS": 12.0,
+        "AST": 4.421052631578948,
+        "AF": 10.578947368421053,
+        "AC": 4.842105263157895,
+        "AY": 1.894736842105263,
+        "AR": 0.15789473684210525
+      },
+      "Watford": {
+        "HS": 11.789473684210526,
+        "HST": 4.368421052631579,
+        "HF": 11.631578947368421,
+        "HC": 4.7894736842105265,
+        "HY": 2.0,
+        "HR": 0.15789473684210525,
+        "AS": 11.052631578947368,
+        "AST": 3.5789473684210527,
+        "AF": 11.157894736842104,
+        "AC": 4.526315789473684,
+        "AY": 2.0526315789473686,
+        "AR": 0.05263157894736842
+      },
+      "West Ham": {
+        "HS": 12.894736842105264,
+        "HST": 4.631578947368421,
+        "HF": 8.68421052631579,
+        "HC": 5.684210526315789,
+        "HY": 1.4736842105263157,
+        "HR": 0.0,
+        "AS": 10.31578947368421,
+        "AST": 3.6315789473684212,
+        "AF": 8.736842105263158,
+        "AC": 4.157894736842105,
+        "AY": 1.631578947368421,
+        "AR": 0.05263157894736842
+      },
+      "Wolves": {
+        "HS": 14.052631578947368,
+        "HST": 4.473684210526316,
+        "HF": 10.421052631578947,
+        "HC": 5.7368421052631575,
+        "HY": 1.736842105263158,
+        "HR": 0.0,
+        "AS": 10.894736842105264,
+        "AST": 3.473684210526316,
+        "AF": 11.105263157894736,
+        "AC": 4.526315789473684,
+        "AY": 2.0526315789473686,
+        "AR": 0.05263157894736842
+      }
+    },
+    "odds_avg": {
+      "B365H": 3.2891842105263156,
+      "B365D": 4.583447368421052,
+      "B365A": 5.6337631578947365
+    },
+    "rf_metrics": {
+      "accuracy": 0.7368,
+      "precision": 0.8238,
+      "recall": 0.6334,
+      "f1_score": 0.6391
+    },
+    "ann_metrics": {
+      "accuracy": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1_score": 0
+    },
+    "rf_confusion_matrix": [
+      [
+        20,
+        0,
+        6
+      ],
+      [
+        3,
+        3,
+        8
+      ],
+      [
+        3,
+        0,
+        33
+      ]
+    ],
+    "ann_confusion_matrix": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "rf_feature_importance": {
+      "HS": 0.0728,
+      "AS": 0.0692,
+      "HST": 0.0888,
+      "AST": 0.0959,
+      "HF": 0.0683,
+      "AF": 0.0664,
+      "HC": 0.0672,
+      "AC": 0.0652,
+      "HY": 0.0404,
+      "AY": 0.0453,
+      "HR": 0.0058,
+      "AR": 0.0082,
+      "B365H": 0.1172,
+      "B365D": 0.0723,
+      "B365A": 0.117
+    },
+    "dataset_stats": {
+      "home_goals_per_match": 1.57,
+      "away_goals_per_match": 1.25,
+      "total_goals": 1072,
+      "total_matches": 380,
+      "home_wins": 181,
+      "draws": 71,
+      "away_wins": 128
+    },
+    "ftr_distribution": {
+      "H": 181,
+      "A": 128,
+      "D": 71
+    },
+    "team_detailed": {
+      "Arsenal": {
+        "matches": 38,
+        "wins": 21,
+        "draws": 7,
+        "losses": 10,
+        "goals_scored": 73,
+        "goals_conceded": 51,
+        "goal_diff": 22,
+        "avg_shots": 12.3,
+        "avg_shots_on_target": 4.5
+      },
+      "Bournemouth": {
+        "matches": 38,
+        "wins": 13,
+        "draws": 6,
+        "losses": 19,
+        "goals_scored": 56,
+        "goals_conceded": 70,
+        "goal_diff": -14,
+        "avg_shots": 11.8,
+        "avg_shots_on_target": 4.3
+      },
+      "Brighton": {
+        "matches": 38,
+        "wins": 9,
+        "draws": 9,
+        "losses": 20,
+        "goals_scored": 35,
+        "goals_conceded": 60,
+        "goal_diff": -25,
+        "avg_shots": 9.6,
+        "avg_shots_on_target": 2.8
+      },
+      "Burnley": {
+        "matches": 38,
+        "wins": 11,
+        "draws": 7,
+        "losses": 20,
+        "goals_scored": 45,
+        "goals_conceded": 68,
+        "goal_diff": -23,
+        "avg_shots": 9.4,
+        "avg_shots_on_target": 3.0
+      },
+      "Cardiff": {
+        "matches": 38,
+        "wins": 10,
+        "draws": 4,
+        "losses": 24,
+        "goals_scored": 34,
+        "goals_conceded": 69,
+        "goal_diff": -35,
+        "avg_shots": 11.0,
+        "avg_shots_on_target": 3.3
+      },
+      "Chelsea": {
+        "matches": 38,
+        "wins": 21,
+        "draws": 9,
+        "losses": 8,
+        "goals_scored": 63,
+        "goals_conceded": 39,
+        "goal_diff": 24,
+        "avg_shots": 15.9,
+        "avg_shots_on_target": 5.2
+      },
+      "Crystal Palace": {
+        "matches": 38,
+        "wins": 14,
+        "draws": 7,
+        "losses": 17,
+        "goals_scored": 51,
+        "goals_conceded": 53,
+        "goal_diff": -2,
+        "avg_shots": 12.9,
+        "avg_shots_on_target": 3.8
+      },
+      "Everton": {
+        "matches": 38,
+        "wins": 15,
+        "draws": 9,
+        "losses": 14,
+        "goals_scored": 54,
+        "goals_conceded": 46,
+        "goal_diff": 8,
+        "avg_shots": 13.0,
+        "avg_shots_on_target": 4.4
+      },
+      "Fulham": {
+        "matches": 38,
+        "wins": 7,
+        "draws": 5,
+        "losses": 26,
+        "goals_scored": 34,
+        "goals_conceded": 81,
+        "goal_diff": -47,
+        "avg_shots": 11.9,
+        "avg_shots_on_target": 3.9
+      },
+      "Huddersfield": {
+        "matches": 38,
+        "wins": 3,
+        "draws": 7,
+        "losses": 28,
+        "goals_scored": 22,
+        "goals_conceded": 76,
+        "goal_diff": -54,
+        "avg_shots": 10.5,
+        "avg_shots_on_target": 3.1
+      },
+      "Leicester": {
+        "matches": 38,
+        "wins": 15,
+        "draws": 7,
+        "losses": 16,
+        "goals_scored": 51,
+        "goals_conceded": 48,
+        "goal_diff": 3,
+        "avg_shots": 13.6,
+        "avg_shots_on_target": 4.8
+      },
+      "Liverpool": {
+        "matches": 38,
+        "wins": 30,
+        "draws": 7,
+        "losses": 1,
+        "goals_scored": 89,
+        "goals_conceded": 22,
+        "goal_diff": 67,
+        "avg_shots": 15.1,
+        "avg_shots_on_target": 5.9
+      },
+      "Man City": {
+        "matches": 38,
+        "wins": 32,
+        "draws": 2,
+        "losses": 4,
+        "goals_scored": 95,
+        "goals_conceded": 23,
+        "goal_diff": 72,
+        "avg_shots": 18.0,
+        "avg_shots_on_target": 6.8
+      },
+      "Man United": {
+        "matches": 38,
+        "wins": 19,
+        "draws": 9,
+        "losses": 10,
+        "goals_scored": 65,
+        "goals_conceded": 54,
+        "goal_diff": 11,
+        "avg_shots": 13.8,
+        "avg_shots_on_target": 5.9
+      },
+      "Newcastle": {
+        "matches": 38,
+        "wins": 12,
+        "draws": 9,
+        "losses": 17,
+        "goals_scored": 42,
+        "goals_conceded": 48,
+        "goal_diff": -6,
+        "avg_shots": 11.7,
+        "avg_shots_on_target": 3.7
+      },
+      "Southampton": {
+        "matches": 38,
+        "wins": 9,
+        "draws": 12,
+        "losses": 17,
+        "goals_scored": 45,
+        "goals_conceded": 65,
+        "goal_diff": -20,
+        "avg_shots": 12.6,
+        "avg_shots_on_target": 4.3
+      },
+      "Tottenham": {
+        "matches": 38,
+        "wins": 23,
+        "draws": 2,
+        "losses": 13,
+        "goals_scored": 67,
+        "goals_conceded": 39,
+        "goal_diff": 28,
+        "avg_shots": 14.1,
+        "avg_shots_on_target": 5.0
+      },
+      "Watford": {
+        "matches": 38,
+        "wins": 14,
+        "draws": 8,
+        "losses": 16,
+        "goals_scored": 52,
+        "goals_conceded": 59,
+        "goal_diff": -7,
+        "avg_shots": 11.4,
+        "avg_shots_on_target": 4.0
+      },
+      "West Ham": {
+        "matches": 38,
+        "wins": 15,
+        "draws": 7,
+        "losses": 16,
+        "goals_scored": 52,
+        "goals_conceded": 55,
+        "goal_diff": -3,
+        "avg_shots": 11.6,
+        "avg_shots_on_target": 4.1
+      },
+      "Wolves": {
+        "matches": 38,
+        "wins": 16,
+        "draws": 9,
+        "losses": 13,
+        "goals_scored": 47,
+        "goals_conceded": 46,
+        "goal_diff": 1,
+        "avg_shots": 12.5,
+        "avg_shots_on_target": 4.0
+      }
+    },
+    "correlation": {
+      "HS": {
+        "HS": 1.0,
+        "AS": -0.491,
+        "HST": 0.694,
+        "AST": -0.313,
+        "HF": -0.17,
+        "AF": 0.028,
+        "HC": 0.587,
+        "AC": -0.45,
+        "HY": -0.15,
+        "AY": 0.068,
+        "HR": -0.141,
+        "AR": 0.043,
+        "FTHG": 0.332,
+        "FTAG": -0.158
+      },
+      "AS": {
+        "HS": -0.491,
+        "AS": 1.0,
+        "HST": -0.301,
+        "AST": 0.638,
+        "HF": 0.141,
+        "AF": -0.077,
+        "HC": -0.433,
+        "AC": 0.566,
+        "HY": 0.168,
+        "AY": -0.04,
+        "HR": 0.102,
+        "AR": -0.058,
+        "FTHG": -0.181,
+        "FTAG": 0.291
+      },
+      "HST": {
+        "HS": 0.694,
+        "AS": -0.301,
+        "HST": 1.0,
+        "AST": -0.18,
+        "HF": -0.087,
+        "AF": -0.048,
+        "HC": 0.381,
+        "AC": -0.313,
+        "HY": -0.113,
+        "AY": -0.009,
+        "HR": -0.102,
+        "AR": 0.016,
+        "FTHG": 0.586,
+        "FTAG": -0.141
+      },
+      "AST": {
+        "HS": -0.313,
+        "AS": 0.638,
+        "HST": -0.18,
+        "AST": 1.0,
+        "HF": 0.151,
+        "AF": -0.037,
+        "HC": -0.264,
+        "AC": 0.282,
+        "HY": 0.142,
+        "AY": -0.07,
+        "HR": 0.159,
+        "AR": 0.046,
+        "FTHG": -0.195,
+        "FTAG": 0.545
+      },
+      "HF": {
+        "HS": -0.17,
+        "AS": 0.141,
+        "HST": -0.087,
+        "AST": 0.151,
+        "HF": 1.0,
+        "AF": 0.1,
+        "HC": -0.085,
+        "AC": 0.016,
+        "HY": 0.347,
+        "AY": 0.076,
+        "HR": 0.027,
+        "AR": 0.034,
+        "FTHG": -0.062,
+        "FTAG": 0.076
+      },
+      "AF": {
+        "HS": 0.028,
+        "AS": -0.077,
+        "HST": -0.048,
+        "AST": -0.037,
+        "HF": 0.1,
+        "AF": 1.0,
+        "HC": -0.001,
+        "AC": -0.076,
+        "HY": 0.077,
+        "AY": 0.336,
+        "HR": -0.041,
+        "AR": 0.061,
+        "FTHG": -0.06,
+        "FTAG": -0.037
+      },
+      "HC": {
+        "HS": 0.587,
+        "AS": -0.433,
+        "HST": 0.381,
+        "AST": -0.264,
+        "HF": -0.085,
+        "AF": -0.001,
+        "HC": 1.0,
+        "AC": -0.402,
+        "HY": -0.13,
+        "AY": 0.031,
+        "HR": -0.036,
+        "AR": 0.053,
+        "FTHG": 0.086,
+        "FTAG": -0.136
+      },
+      "AC": {
+        "HS": -0.45,
+        "AS": 0.566,
+        "HST": -0.313,
+        "AST": 0.282,
+        "HF": 0.016,
+        "AF": -0.076,
+        "HC": -0.402,
+        "AC": 1.0,
+        "HY": 0.12,
+        "AY": -0.102,
+        "HR": 0.046,
+        "AR": -0.046,
+        "FTHG": -0.135,
+        "FTAG": 0.035
+      },
+      "HY": {
+        "HS": -0.15,
+        "AS": 0.168,
+        "HST": -0.113,
+        "AST": 0.142,
+        "HF": 0.347,
+        "AF": 0.077,
+        "HC": -0.13,
+        "AC": 0.12,
+        "HY": 1.0,
+        "AY": 0.134,
+        "HR": -0.035,
+        "AR": 0.021,
+        "FTHG": -0.111,
+        "FTAG": 0.145
+      },
+      "AY": {
+        "HS": 0.068,
+        "AS": -0.04,
+        "HST": -0.009,
+        "AST": -0.07,
+        "HF": 0.076,
+        "AF": 0.336,
+        "HC": 0.031,
+        "AC": -0.102,
+        "HY": 0.134,
+        "AY": 1.0,
+        "HR": 0.017,
+        "AR": 0.009,
+        "FTHG": -0.051,
+        "FTAG": 0.032
+      },
+      "HR": {
+        "HS": -0.141,
+        "AS": 0.102,
+        "HST": -0.102,
+        "AST": 0.159,
+        "HF": 0.027,
+        "AF": -0.041,
+        "HC": -0.036,
+        "AC": 0.046,
+        "HY": -0.035,
+        "AY": 0.017,
+        "HR": 1.0,
+        "AR": 0.028,
+        "FTHG": -0.059,
+        "FTAG": 0.173
+      },
+      "AR": {
+        "HS": 0.043,
+        "AS": -0.058,
+        "HST": 0.016,
+        "AST": 0.046,
+        "HF": 0.034,
+        "AF": 0.061,
+        "HC": 0.053,
+        "AC": -0.046,
+        "HY": 0.021,
+        "AY": 0.009,
+        "HR": 0.028,
+        "AR": 1.0,
+        "FTHG": 0.004,
+        "FTAG": -0.051
+      },
+      "FTHG": {
+        "HS": 0.332,
+        "AS": -0.181,
+        "HST": 0.586,
+        "AST": -0.195,
+        "HF": -0.062,
+        "AF": -0.06,
+        "HC": 0.086,
+        "AC": -0.135,
+        "HY": -0.111,
+        "AY": -0.051,
+        "HR": -0.059,
+        "AR": 0.004,
+        "FTHG": 1.0,
+        "FTAG": -0.178
+      },
+      "FTAG": {
+        "HS": -0.158,
+        "AS": 0.291,
+        "HST": -0.141,
+        "AST": 0.545,
+        "HF": 0.076,
+        "AF": -0.037,
+        "HC": -0.136,
+        "AC": 0.035,
+        "HY": 0.145,
+        "AY": 0.032,
+        "HR": 0.173,
+        "AR": -0.051,
+        "FTHG": -0.178,
+        "FTAG": 1.0
+      }
+    }
+  },
+  "cricket": {
+    "features": [
+      "team1_enc",
+      "team2_enc",
+      "team1_runs",
+      "team1_wickets",
+      "team1_extras",
+      "team1_fours",
+      "team1_sixes",
+      "team1_run_rate",
+      "team2_extras"
+    ],
+    "classes": [
+      "Chasing Team Won",
+      "Batting First Won"
+    ],
+    "teams_batting_first": [
+      "Chennai Super Kings",
+      "Deccan Chargers",
+      "Delhi Capitals",
+      "Delhi Daredevils",
+      "Gujarat Lions",
+      "Gujarat Titans",
+      "Kings XI Punjab",
+      "Kochi Tuskers Kerala",
+      "Kolkata Knight Riders",
+      "Lucknow Super Giants",
+      "Mumbai Indians",
+      "Pune Warriors",
+      "Punjab Kings",
+      "Rajasthan Royals",
+      "Rising Pune Supergiant",
+      "Rising Pune Supergiants",
+      "Royal Challengers Bangalore",
+      "Royal Challengers Bengaluru",
+      "Sunrisers Hyderabad"
+    ],
+    "teams_chasing": [
+      "Chennai Super Kings",
+      "Deccan Chargers",
+      "Delhi Capitals",
+      "Delhi Daredevils",
+      "Gujarat Lions",
+      "Gujarat Titans",
+      "Kings XI Punjab",
+      "Kochi Tuskers Kerala",
+      "Kolkata Knight Riders",
+      "Lucknow Super Giants",
+      "Mumbai Indians",
+      "Pune Warriors",
+      "Punjab Kings",
+      "Rajasthan Royals",
+      "Rising Pune Supergiant",
+      "Rising Pune Supergiants",
+      "Royal Challengers Bangalore",
+      "Royal Challengers Bengaluru",
+      "Sunrisers Hyderabad"
+    ],
+    "all_teams": [
+      "Chennai Super Kings",
+      "Deccan Chargers",
+      "Delhi Capitals",
+      "Delhi Daredevils",
+      "Gujarat Lions",
+      "Gujarat Titans",
+      "Kings XI Punjab",
+      "Kochi Tuskers Kerala",
+      "Kolkata Knight Riders",
+      "Lucknow Super Giants",
+      "Mumbai Indians",
+      "Pune Warriors",
+      "Punjab Kings",
+      "Rajasthan Royals",
+      "Rising Pune Supergiant",
+      "Rising Pune Supergiants",
+      "Royal Challengers Bangalore",
+      "Royal Challengers Bengaluru",
+      "Sunrisers Hyderabad"
+    ],
+    "batting_first_avgs": {
+      "Chennai Super Kings": {
+        "team1_runs": 169.94,
+        "team1_wickets": 5.3,
+        "team1_extras": 8.11,
+        "team1_fours": 14.1,
+        "team1_sixes": 6.72,
+        "team1_run_rate": 8.23
+      },
+      "Deccan Chargers": {
+        "team1_runs": 157.33,
+        "team1_wickets": 6.47,
+        "team1_extras": 7.47,
+        "team1_fours": 13.0,
+        "team1_sixes": 5.53,
+        "team1_run_rate": 7.68
+      },
+      "Delhi Capitals": {
+        "team1_runs": 172.1,
+        "team1_wickets": 6.1,
+        "team1_extras": 7.73,
+        "team1_fours": 15.15,
+        "team1_sixes": 6.59,
+        "team1_run_rate": 8.29
+      },
+      "Delhi Daredevils": {
+        "team1_runs": 157.62,
+        "team1_wickets": 6.18,
+        "team1_extras": 8.18,
+        "team1_fours": 13.38,
+        "team1_sixes": 5.39,
+        "team1_run_rate": 7.72
+      },
+      "Gujarat Lions": {
+        "team1_runs": 161.93,
+        "team1_wickets": 7.14,
+        "team1_extras": 6.64,
+        "team1_fours": 14.5,
+        "team1_sixes": 5.14,
+        "team1_run_rate": 7.88
+      },
+      "Gujarat Titans": {
+        "team1_runs": 178.81,
+        "team1_wickets": 5.71,
+        "team1_extras": 8.76,
+        "team1_fours": 15.14,
+        "team1_sixes": 6.62,
+        "team1_run_rate": 8.6
+      },
+      "Kings XI Punjab": {
+        "team1_runs": 161.96,
+        "team1_wickets": 6.48,
+        "team1_extras": 8.78,
+        "team1_fours": 14.2,
+        "team1_sixes": 5.74,
+        "team1_run_rate": 7.93
+      },
+      "Kochi Tuskers Kerala": {
+        "team1_runs": 144.14,
+        "team1_wickets": 7.29,
+        "team1_extras": 11.14,
+        "team1_fours": 11.57,
+        "team1_sixes": 3.71,
+        "team1_run_rate": 6.91
+      },
+      "Kolkata Knight Riders": {
+        "team1_runs": 164.28,
+        "team1_wickets": 6.43,
+        "team1_extras": 8.82,
+        "team1_fours": 14.21,
+        "team1_sixes": 6.51,
+        "team1_run_rate": 8.03
+      },
+      "Lucknow Super Giants": {
+        "team1_runs": 181.36,
+        "team1_wickets": 5.73,
+        "team1_extras": 8.86,
+        "team1_fours": 13.73,
+        "team1_sixes": 8.5,
+        "team1_run_rate": 8.68
+      },
+      "Mumbai Indians": {
+        "team1_runs": 166.72,
+        "team1_wickets": 6.23,
+        "team1_extras": 8.58,
+        "team1_fours": 14.49,
+        "team1_sixes": 6.43,
+        "team1_run_rate": 8.04
+      },
+      "Pune Warriors": {
+        "team1_runs": 148.65,
+        "team1_wickets": 6.25,
+        "team1_extras": 7.7,
+        "team1_fours": 12.55,
+        "team1_sixes": 4.8,
+        "team1_run_rate": 7.27
+      },
+      "Punjab Kings": {
+        "team1_runs": 169.32,
+        "team1_wickets": 7.0,
+        "team1_extras": 8.65,
+        "team1_fours": 14.35,
+        "team1_sixes": 7.35,
+        "team1_run_rate": 8.1
+      },
+      "Rajasthan Royals": {
+        "team1_runs": 163.69,
+        "team1_wickets": 6.2,
+        "team1_extras": 8.31,
+        "team1_fours": 14.65,
+        "team1_sixes": 5.64,
+        "team1_run_rate": 7.93
+      },
+      "Rising Pune Supergiant": {
+        "team1_runs": 163.0,
+        "team1_wickets": 6.0,
+        "team1_extras": 6.62,
+        "team1_fours": 13.0,
+        "team1_sixes": 5.5,
+        "team1_run_rate": 7.87
+      },
+      "Rising Pune Supergiants": {
+        "team1_runs": 160.43,
+        "team1_wickets": 5.29,
+        "team1_extras": 6.71,
+        "team1_fours": 13.0,
+        "team1_sixes": 5.0,
+        "team1_run_rate": 7.89
+      },
+      "Royal Challengers Bangalore": {
+        "team1_runs": 166.48,
+        "team1_wickets": 5.84,
+        "team1_extras": 8.23,
+        "team1_fours": 13.52,
+        "team1_sixes": 6.91,
+        "team1_run_rate": 8.22
+      },
+      "Royal Challengers Bengaluru": {
+        "team1_runs": 195.33,
+        "team1_wickets": 6.56,
+        "team1_extras": 8.33,
+        "team1_fours": 14.44,
+        "team1_sixes": 10.44,
+        "team1_run_rate": 9.31
+      },
+      "Sunrisers Hyderabad": {
+        "team1_runs": 167.66,
+        "team1_wickets": 5.99,
+        "team1_extras": 8.41,
+        "team1_fours": 13.98,
+        "team1_sixes": 6.0,
+        "team1_run_rate": 8.12
+      }
+    },
+    "chasing_avgs": {
+      "Chennai Super Kings": {
+        "team2_extras": 7.81
+      },
+      "Deccan Chargers": {
+        "team2_extras": 8.03
+      },
+      "Delhi Capitals": {
+        "team2_extras": 7.0
+      },
+      "Delhi Daredevils": {
+        "team2_extras": 7.73
+      },
+      "Gujarat Lions": {
+        "team2_extras": 8.5
+      },
+      "Gujarat Titans": {
+        "team2_extras": 9.0
+      },
+      "Kings XI Punjab": {
+        "team2_extras": 7.19
+      },
+      "Kochi Tuskers Kerala": {
+        "team2_extras": 9.29
+      },
+      "Kolkata Knight Riders": {
+        "team2_extras": 8.55
+      },
+      "Lucknow Super Giants": {
+        "team2_extras": 10.86
+      },
+      "Mumbai Indians": {
+        "team2_extras": 8.48
+      },
+      "Pune Warriors": {
+        "team2_extras": 6.56
+      },
+      "Punjab Kings": {
+        "team2_extras": 9.04
+      },
+      "Rajasthan Royals": {
+        "team2_extras": 6.97
+      },
+      "Rising Pune Supergiant": {
+        "team2_extras": 5.88
+      },
+      "Rising Pune Supergiants": {
+        "team2_extras": 7.71
+      },
+      "Royal Challengers Bangalore": {
+        "team2_extras": 7.38
+      },
+      "Royal Challengers Bengaluru": {
+        "team2_extras": 11.0
+      },
+      "Sunrisers Hyderabad": {
+        "team2_extras": 7.24
+      }
+    },
+    "rf_metrics": {
+      "accuracy": 0.6347,
+      "precision": 0.634,
+      "recall": 0.6273,
+      "f1_score": 0.6262
+    },
+    "ann_metrics": {
+      "accuracy": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1_score": 0
+    },
+    "rf_confusion_matrix": [
+      [
+        86,
+        31
+      ],
+      [
+        49,
+        53
+      ]
+    ],
+    "ann_confusion_matrix": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "rf_feature_importance": {
+      "team1_enc": 0.0919,
+      "team2_enc": 0.0833,
+      "team1_runs": 0.1719,
+      "team1_wickets": 0.072,
+      "team1_extras": 0.0929,
+      "team1_fours": 0.0902,
+      "team1_sixes": 0.0926,
+      "team1_run_rate": 0.2157,
+      "team2_extras": 0.0896
+    },
+    "dataset_stats": {
+      "total_deliveries": 260759,
+      "total_matches": 1092,
+      "total_runs": 347470,
+      "total_wickets": 12923,
+      "total_fours": 29827,
+      "total_sixes": 13036,
+      "teams_count": 19
+    },
+    "outcome_distribution": {
+      "0": 585,
+      "1": 507
+    },
+    "top_batters": {
+      "V Kohli": 8004,
+      "S Dhawan": 6769,
+      "RG Sharma": 6628,
+      "DA Warner": 6565,
+      "SK Raina": 5528,
+      "MS Dhoni": 5243,
+      "AB de Villiers": 5162,
+      "CH Gayle": 4965,
+      "RV Uthappa": 4952,
+      "KD Karthik": 4842,
+      "KL Rahul": 4683,
+      "AM Rahane": 4642,
+      "F du Plessis": 4571,
+      "SV Samson": 4419,
+      "AT Rayudu": 4348
+    },
+    "top_bowlers": {
+      "YS Chahal": 213,
+      "DJ Bravo": 207,
+      "PP Chawla": 201,
+      "SP Narine": 200,
+      "R Ashwin": 198,
+      "B Kumar": 195,
+      "SL Malinga": 188,
+      "A Mishra": 183,
+      "JJ Bumrah": 178,
+      "RA Jadeja": 169,
+      "UT Yadav": 163,
+      "Harbhajan Singh": 161,
+      "Rashid Khan": 157,
+      "Sandeep Sharma": 153,
+      "HV Patel": 151
+    },
+    "runs_per_over": {
+      "0": 0.97,
+      "1": 1.17,
+      "2": 1.32,
+      "3": 1.36,
+      "4": 1.37,
+      "5": 1.37,
+      "6": 1.1,
+      "7": 1.19,
+      "8": 1.24,
+      "9": 1.22,
+      "10": 1.26,
+      "11": 1.29,
+      "12": 1.3,
+      "13": 1.34,
+      "14": 1.39,
+      "15": 1.43,
+      "16": 1.5,
+      "17": 1.59,
+      "18": 1.65,
+      "19": 1.78
+    },
+    "wickets_per_over": {
+      "0": 0.0317,
+      "1": 0.0365,
+      "2": 0.0392,
+      "3": 0.0404,
+      "4": 0.0425,
+      "5": 0.04,
+      "6": 0.033,
+      "7": 0.0351,
+      "8": 0.0401,
+      "9": 0.0373,
+      "10": 0.0427,
+      "11": 0.0428,
+      "12": 0.0442,
+      "13": 0.0482,
+      "14": 0.0534,
+      "15": 0.0571,
+      "16": 0.0614,
+      "17": 0.0792,
+      "18": 0.0854,
+      "19": 0.1308
+    },
+    "team_runs": {
+      "Mumbai Indians": 42133,
+      "Kolkata Knight Riders": 39295,
+      "Chennai Super Kings": 38620,
+      "Royal Challengers Bangalore": 37651,
+      "Rajasthan Royals": 34712,
+      "Kings XI Punjab": 30017,
+      "Sunrisers Hyderabad": 29034,
+      "Delhi Daredevils": 24285,
+      "Delhi Capitals": 14879,
+      "Deccan Chargers": 11463,
+      "Punjab Kings": 9536,
+      "Gujarat Titans": 7757,
+      "Lucknow Super Giants": 7510,
+      "Pune Warriors": 6358,
+      "Gujarat Lions": 4856,
+      "Royal Challengers Bengaluru": 2930,
+      "Rising Pune Supergiant": 2470,
+      "Rising Pune Supergiants": 2063,
+      "Kochi Tuskers Kerala": 1901
+    },
+    "team_win_rates": {
+      "Kolkata Knight Riders": {
+        "bat_first_matches": 120,
+        "bat_first_wins": 54,
+        "bat_first_win_rate": 45.0
+      },
+      "Chennai Super Kings": {
+        "bat_first_matches": 130,
+        "bat_first_wins": 71,
+        "bat_first_win_rate": 54.6
+      },
+      "Rajasthan Royals": {
+        "bat_first_matches": 103,
+        "bat_first_wins": 43,
+        "bat_first_win_rate": 41.7
+      },
+      "Mumbai Indians": {
+        "bat_first_matches": 134,
+        "bat_first_wins": 71,
+        "bat_first_win_rate": 53.0
+      },
+      "Deccan Chargers": {
+        "bat_first_matches": 43,
+        "bat_first_wins": 18,
+        "bat_first_win_rate": 41.9
+      },
+      "Kings XI Punjab": {
+        "bat_first_matches": 97,
+        "bat_first_wins": 41,
+        "bat_first_win_rate": 42.3
+      },
+      "Royal Challengers Bangalore": {
+        "bat_first_matches": 120,
+        "bat_first_wins": 54,
+        "bat_first_win_rate": 45.0
+      },
+      "Delhi Daredevils": {
+        "bat_first_matches": 71,
+        "bat_first_wins": 29,
+        "bat_first_win_rate": 40.8
+      },
+      "Kochi Tuskers Kerala": {
+        "bat_first_matches": 7,
+        "bat_first_wins": 2,
+        "bat_first_win_rate": 28.6
+      },
+      "Pune Warriors": {
+        "bat_first_matches": 20,
+        "bat_first_wins": 6,
+        "bat_first_win_rate": 30.0
+      },
+      "Sunrisers Hyderabad": {
+        "bat_first_matches": 94,
+        "bat_first_wins": 47,
+        "bat_first_win_rate": 50.0
+      },
+      "Rising Pune Supergiants": {
+        "bat_first_matches": 7,
+        "bat_first_wins": 1,
+        "bat_first_win_rate": 14.3
+      },
+      "Gujarat Lions": {
+        "bat_first_matches": 14,
+        "bat_first_wins": 1,
+        "bat_first_win_rate": 7.1
+      },
+      "Rising Pune Supergiant": {
+        "bat_first_matches": 8,
+        "bat_first_wins": 5,
+        "bat_first_win_rate": 62.5
+      },
+      "Delhi Capitals": {
+        "bat_first_matches": 41,
+        "bat_first_wins": 21,
+        "bat_first_win_rate": 51.2
+      },
+      "Punjab Kings": {
+        "bat_first_matches": 31,
+        "bat_first_wins": 11,
+        "bat_first_win_rate": 35.5
+      },
+      "Lucknow Super Giants": {
+        "bat_first_matches": 22,
+        "bat_first_wins": 16,
+        "bat_first_win_rate": 72.7
+      },
+      "Gujarat Titans": {
+        "bat_first_matches": 21,
+        "bat_first_wins": 12,
+        "bat_first_win_rate": 57.1
+      },
+      "Royal Challengers Bengaluru": {
+        "bat_first_matches": 9,
+        "bat_first_wins": 4,
+        "bat_first_win_rate": 44.4
+      }
+    },
+    "ball_correlation": {
+      "over": {
+        "over": 1.0,
+        "ball": -0.001,
+        "batsman_runs": 0.08,
+        "extra_runs": 0.005,
+        "total_runs": 0.082,
+        "is_wicket": 0.074
+      },
+      "ball": {
+        "over": -0.001,
+        "ball": 1.0,
+        "batsman_runs": 0.004,
+        "extra_runs": 0.0,
+        "total_runs": 0.004,
+        "is_wicket": 0.004
+      },
+      "batsman_runs": {
+        "over": 0.08,
+        "ball": 0.004,
+        "batsman_runs": 1.0,
+        "extra_runs": -0.142,
+        "total_runs": 0.978,
+        "is_wicket": -0.172
+      },
+      "extra_runs": {
+        "over": 0.005,
+        "ball": 0.0,
+        "batsman_runs": -0.142,
+        "extra_runs": 1.0,
+        "total_runs": 0.068,
+        "is_wicket": -0.042
+      },
+      "total_runs": {
+        "over": 0.082,
+        "ball": 0.004,
+        "batsman_runs": 0.978,
+        "extra_runs": 0.068,
+        "total_runs": 1.0,
+        "is_wicket": -0.182
+      },
+      "is_wicket": {
+        "over": 0.074,
+        "ball": 0.004,
+        "batsman_runs": -0.172,
+        "extra_runs": -0.042,
+        "total_runs": -0.182,
+        "is_wicket": 1.0
+      }
+    }
+  },
+  "has_tensorflow": false
+}
