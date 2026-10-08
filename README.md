@@ -22,6 +22,8 @@ ML_Project-S4/
 │   └── E0 2018-2019.csv                     # English Premier League 2018-2019 Match Data
 │
 ├── docs/                                     # Project Documentation & Presentations
+│   ├── CaseStudy_Report_ML.docx             # Complete Case Study Report (Word Document)
+│   ├── CaseStudy_Report_ML.md               # Case Study Report (Markdown)
 │   ├── Project_Abstract.pdf                 # Project Abstract (PDF)
 │   ├── Project_Abstract_Cricket_Football.docx # Project Abstract (Word document)
 │   ├── Match_Outcome_Prediction_Cricket_Football.pptx # Project Presentation Slides
@@ -113,6 +115,7 @@ The [`eda/`](eda/) directory contains in-depth data exploration for both sports:
 ## 📄 Documentation & Presentation
 
 All formal academic deliverables are neatly organized under [`docs/`](docs/):
+- **Case Study Report**: [`CaseStudy_Report_ML.docx`](docs/CaseStudy_Report_ML.docx) *(Official Course Submission Docx)* and [`CaseStudy_Report_ML.md`](docs/CaseStudy_Report_ML.md)
 - **Abstract**: [`Project_Abstract.pdf`](docs/Project_Abstract.pdf) and [`Project_Abstract_Cricket_Football.docx`](docs/Project_Abstract_Cricket_Football.docx)
 - **Literature Review**: [`Literature-Review.xlsx`](docs/Literature-Review.xlsx)
 - **Presentation Deck**: [`Match_Outcome_Prediction_Cricket_Football.pptx`](docs/Match_Outcome_Prediction_Cricket_Football.pptx)
